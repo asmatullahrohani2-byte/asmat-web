@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,457 +7,1100 @@
 <title>Asmat Web Studio | Web Developer</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-:root{
---dark:#07111f;
---dark2:#102c55;
---blue:#38bdf8;
---green:#22c55e;
---text:#1e293b;
---muted:#64748b;
---light:#f5f8fc
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth
 }
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:var(--light);
-color:var(--text);
-line-height:1.6
-}
-a{text-decoration:none}
-img{display:block;max-width:100%}
-.container{width:min(1120px,92%);margin:auto}
 
+:root{
+  --dark:#07111f;
+  --dark2:#102c55;
+  --blue:#38bdf8;
+  --green:#22c55e;
+  --text:#1e293b;
+  --muted:#64748b;
+  --light:#f5f8fc
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  overflow-x:hidden
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.6
+}
+
+a{
+  text-decoration:none
+}
+
+img{
+  display:block;
+  max-width:100%
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto
+}
+
+/* NAVBAR */
 nav{
-position:sticky;
-top:0;
-z-index:999;
-background:rgba(7,17,31,.97);
-box-shadow:0 4px 20px #0003
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100%;
+  background:rgba(7,17,31,.97);
+  box-shadow:0 4px 20px #0003
 }
 
 .nav{
-min-height:70px;
-display:flex;
-align-items:center;
-justify-content:space-between
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
 }
 
 .logo{
-font-size:26px;
-font-weight:800;
-color:white
+  font-size:26px;
+  font-weight:800;
+  color:white
 }
 
-.logo span{color:var(--blue)}
+.logo span{
+  color:var(--blue)
+}
 
 .links{
-display:flex;
-gap:22px;
-list-style:none
+  display:flex;
+  gap:22px;
+  list-style:none
 }
 
 .links a{
-color:white;
-font-weight:600
+  color:white;
+  font-weight:600
 }
 
-.links a:hover{color:var(--blue)}
+.links a:hover{
+  color:var(--blue)
+}
 
 .menu{
-display:none;
-background:none;
-border:0;
-color:white;
-font-size:28px
+  display:none;
+  background:none;
+  border:0;
+  color:white;
+  font-size:28px;
+  cursor:pointer
 }
 
+/* HERO */
 .hero{
-min-height:calc(100vh - 70px);
-padding:70px 0;
-background:linear-gradient(135deg,var(--dark),var(--dark2) 65%,#075985);
-color:white
+  min-height:calc(100vh - 70px);
+  padding:70px 0;
+  background:linear-gradient(
+    135deg,
+    var(--dark),
+    var(--dark2) 65%,
+    #075985
+  );
+  color:white
 }
 
 .hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center
 }
 
 .hero h1{
-font-size:clamp(42px,6vw,68px);
-line-height:1.05;
-margin-bottom:18px
+  font-size:clamp(42px,6vw,68px);
+  line-height:1.05;
+  margin-bottom:18px
 }
 
-.hero h1 span{color:var(--blue)}
+.hero h1 span{
+  color:var(--blue)
+}
 
 .hero h2{
-color:#bae6fd;
-margin-bottom:15px
+  color:#bae6fd;
+  margin-bottom:15px
 }
 
 .hero p{
-color:#dbeafe;
-font-size:18px;
-max-width:650px;
-margin-bottom:25px
+  color:#dbeafe;
+  font-size:18px;
+  max-width:650px;
+  margin-bottom:25px
 }
 
 .buttons{
-display:flex;
-gap:8px;
-flex-wrap:wrap
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap
 }
 
 .btn{
-display:inline-block;
-padding:12px 21px;
-border-radius:9px;
-background:var(--blue);
-border:2px solid var(--blue);
-color:#06243a;
-font-weight:800;
-transition:.25s
+  display:inline-block;
+  padding:12px 21px;
+  border-radius:9px;
+  background:var(--blue);
+  border:2px solid var(--blue);
+  color:#06243a;
+  font-weight:800;
+  transition:.25s
 }
 
 .btn:hover{
-transform:translateY(-3px);
-background:white;
-border-color:white
+  transform:translateY(-3px);
+  background:white;
+  border-color:white
 }
 
 .green{
-background:var(--green);
-border-color:var(--green);
-color:white
+  background:var(--green);
+  border-color:var(--green);
+  color:white
 }
 
 .outline{
-background:transparent;
-color:white
+  background:transparent;
+  color:white
 }
 
-.hero-img{position:relative}
+.hero-img{
+  position:relative
+}
 
 .hero-img img{
-height:430px;
-width:100%;
-object-fit:cover;
-border-radius:24px;
-box-shadow:0 25px 60px #0006
+  height:430px;
+  width:100%;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:0 25px 60px #0006;
+  background:#dbeafe;
+  min-height:120px
 }
 
 .badge{
-position:absolute;
-bottom:18px;
-left:18px;
-background:#07111fe8;
-color:white;
-padding:12px 16px;
-border-radius:12px
+  position:absolute;
+  bottom:18px;
+  left:18px;
+  background:#07111fe8;
+  color:white;
+  padding:12px 16px;
+  border-radius:12px
 }
 
-section{padding:85px 0}
+/* SECTIONS */
+section{
+  padding:85px 0;
+  width:100%
+}
 
 .head{
-text-align:center;
-margin-bottom:45px
+  text-align:center;
+  margin-bottom:45px
 }
 
 .head h2{
-font-size:38px;
-color:var(--dark);
-margin-bottom:8px
+  font-size:38px;
+  color:var(--dark);
+  margin-bottom:8px
 }
 
-.head p{color:var(--muted)}
+.head p{
+  color:var(--muted)
+}
 
+/* ABOUT */
 .about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:55px;
-align-items:center
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center
 }
 
 .about img{
-height:380px;
-width:100%;
-object-fit:cover;
-border-radius:20px
+  height:380px;
+  width:100%;
+  object-fit:cover;
+  border-radius:20px;
+  background:#dbeafe;
+  min-height:120px
 }
 
 .about h3{
-font-size:30px;
-color:#173d78;
-margin-bottom:14px
+  font-size:30px;
+  color:#173d78;
+  margin-bottom:14px
 }
 
 .about p{
-color:#475569;
-margin-bottom:14px
+  color:#475569;
+  margin-bottom:14px
 }
 
 .stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin-top:22px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:22px
 }
 
 .stat{
-background:white;
-padding:18px;
-text-align:center;
-border-radius:13px;
-box-shadow:0 6px 20px #00000010
+  background:white;
+  padding:18px;
+  text-align:center;
+  border-radius:13px;
+  box-shadow:0 6px 20px #00000010
 }
 
 .stat strong{
-display:block;
-font-size:26px;
-color:#0284c7
+  display:block;
+  font-size:26px;
+  color:#0284c7
 }
 
 .stat span{
-color:var(--muted);
-font-size:13px
+  color:var(--muted);
+  font-size:13px
 }
 
-.skills{background:#eef6ff}
+/* SKILLS */
+.skills{
+  background:#eef6ff
+}
 
 .grid4{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px
 }
 
 .skill,
 .service,
 .project{
-background:white;
-border-radius:16px;
-box-shadow:0 7px 25px #00000012;
-overflow:hidden;
-transition:.25s
+  background:white;
+  border-radius:16px;
+  box-shadow:0 7px 25px #00000012;
+  overflow:hidden;
+  transition:.25s
 }
 
 .skill{
-padding:28px 18px;
-text-align:center
+  padding:28px 18px;
+  text-align:center
 }
 
 .skill:hover,
 .service:hover,
 .project:hover{
-transform:translateY(-7px)
+  transform:translateY(-7px)
 }
 
 .icon{
-font-size:48px;
-margin-bottom:10px
+  font-size:48px;
+  margin-bottom:10px
 }
 
 .skill p,
 .service p,
 .project p{
-color:var(--muted)
+  color:var(--muted)
 }
 
-.services{background:#f1f5ff}
+/* SERVICES */
+.services{
+  background:#f1f5ff
+}
 
 .service{
-text-align:center;
-padding-bottom:22px
+  text-align:center;
+  padding-bottom:22px
 }
 
 .service img{
-width:100%;
-height:155px;
-object-fit:cover
+  width:100%;
+  height:155px;
+  object-fit:cover;
+  background:#dbeafe;
+  min-height:120px
 }
 
-.service-body{padding:20px}
+.service-body{
+  padding:20px
+}
 
 .service h3{
-color:#173d78;
-margin-bottom:7px
+  color:#173d78;
+  margin-bottom:7px
 }
 
 .price{
-font-size:28px;
-font-weight:800;
-color:#0284c7;
-margin:12px 0
+  font-size:28px;
+  font-weight:800;
+  color:#0284c7;
+  margin:12px 0
 }
 
-.projects{background:white}
+/* PROJECTS */
+.projects{
+  background:white
+}
 
 .projects-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px
 }
 
 .project img{
-width:100%;
-height:220px;
-object-fit:cover
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  background:#dbeafe;
+  min-height:120px
 }
 
-.project-body{padding:21px}
+.project-body{
+  padding:21px
+}
 
-.project h3{margin-bottom:8px}
+.project h3{
+  margin-bottom:8px
+}
 
 .project-btn{
-display:inline-block;
-margin-top:12px;
-padding:9px 16px;
-border-radius:7px;
-background:#173d78;
-color:white
+  display:inline-block;
+  margin-top:12px;
+  padding:9px 16px;
+  border-radius:7px;
+  background:#173d78;
+  color:white
 }
 
 .project-btn:hover{
-background:var(--blue);
-color:#06243a
+  background:var(--blue);
+  color:#06243a
 }
 
+/* CONTACT */
 .contact{
-background:var(--dark);
-color:white
+  background:var(--dark);
+  color:white
 }
 
-.contact .head h2{color:white}
+.contact .head h2{
+  color:white
+}
 
-.contact .head p{color:#cbd5e1}
+.contact .head p{
+  color:#cbd5e1
+}
 
 .box{
-max-width:780px;
-margin:auto;
-background:#12223a;
-padding:35px;
-border-radius:20px;
-text-align:center
+  max-width:780px;
+  margin:auto;
+  background:#12223a;
+  padding:35px;
+  border-radius:20px;
+  text-align:center
 }
 
-.item{margin:17px}
+.item{
+  margin:17px
+}
 
 .item strong{
-display:block;
-color:#94a3b8;
-margin-bottom:4px
+  display:block;
+  color:#94a3b8;
+  margin-bottom:4px
 }
 
 .item a{
-color:var(--blue);
-font-size:18px
+  color:var(--blue);
+  font-size:18px
 }
 
+/* FOOTER */
 footer{
-background:#020812;
-color:#94a3b8;
-text-align:center;
-padding:28px
+  background:#020812;
+  color:#94a3b8;
+  text-align:center;
+  padding:28px
 }
 
-footer span{color:var(--blue)}
+footer span{
+  color:var(--blue)
+}
 
+/* TOP BUTTON */
 .top{
-position:fixed;
-right:18px;
-bottom:18px;
-width:44px;
-height:44px;
-border-radius:50%;
-display:grid;
-place-items:center;
-background:var(--blue);
-color:#06243a;
-font-weight:900
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--blue);
+  color:#06243a;
+  font-weight:900
 }
 
+/* TABLET */
 @media(max-width:900px){
 
-.hero-grid,
-.about{
-grid-template-columns:1fr
+  .hero-grid,
+  .about{
+    grid-template-columns:1fr
+  }
+
+  .hero{
+    text-align:center
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto
+  }
+
+  .buttons{
+    justify-content:center
+  }
+
+  .hero-img{
+    max-width:650px;
+    margin:auto
+  }
+
+  .grid4{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .projects-grid{
+    grid-template-columns:1fr 1fr
+  }
 }
 
-.hero{text-align:center}
-
-.hero p{
-margin-left:auto;
-margin-right:auto
-}
-
-.buttons{
-justify-content:center
-}
-
-.hero-img{
-max-width:650px;
-margin:auto
-}
-
-.grid4{
-grid-template-columns:repeat(2,1fr)
-}
-
-.projects-grid{
-grid-template-columns:1fr 1fr
-}
-
-}
-
+/* MOBILE */
 @media(max-width:650px){
 
-.menu{display:block}
+  .container{
+    width:94%
+  }
 
-.links{
-display:none;
-position:absolute;
-top:70px;
-left:0;
-right:0;
-background:var(--dark);
-padding:18px 4%;
-flex-direction:column;
-gap:13px
-}
+  .menu{
+    display:block
+  }
 
-.links.open{display:flex}
+  .links{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    background:var(--dark);
+    padding:18px 4%;
+    flex-direction:column;
+    gap:13px
+  }
 
-.hero{padding:60px 0}
+  .links.open{
+    display:flex
+  }
 
-.hero-img img{height:300px}
+  .hero{
+    padding:60px 0
+  }
 
-section{padding:65px 0}
+  .hero-grid,
+  .about,
+  .projects-grid,
+  .grid4,
+  .stats{
+    width:100%
+  }
 
-.head h2{font-size:30px}
+  .hero h1{
+    font-size:42px
+  }
 
-.grid4,
-.projects-grid,
-.stats{
-grid-template-columns:1fr
-}
+  .hero h2{
+    font-size:23px
+  }
 
-.box{padding:25px 15px}
+  .hero p{
+    font-size:16px
+  }
 
+  .buttons .btn{
+    width:100%;
+    text-align:center
+  }
+
+  .hero-img img{
+    height:280px
+  }
+
+  .about img{
+    height:300px
+  }
+
+  section{
+    padding:65px 0
+  }
+
+  .head h2{
+    font-size:30px
+  }
+
+  .grid4,
+  .projects-grid,
+  .stats{
+    grid-template-columns:1fr
+  }
+
+  .service img{
+    height:170px
+  }
+
+  .project img{
+    height:200px
+  }
+
+  .box{
+    padding:25px 15px
+  }
+
+  .box .btn{
+    margin:5px 0;
+    width:100%;
+  }
 }
 </style>
 </head>
 
 <body id="home">
 
+<!-- NAVBAR -->
 <nav>
-<div class="container nav">
+  <div class="container nav">
 
-<a class="logo" href="#home">
-Asmat<span>Web</span>
-</a>
+    <a class="logo" href="#home">
+      Asmat<span>Web</span>
+    </a>
 
-<button class="menu" id="menu">☰</button>
+    <button class="menu" id="menu">☰</button>
 
-<ul class="links" id=" 
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <h1>Hi, I'm <span>Asmat</span></h1>
+
+      <h2>Web Developer & Designer</h2>
+
+      <p>
+        I create modern, responsive and professional websites
+        for businesses, personal brands and online projects.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn" href="#projects">
+          View My Work
+        </a>
+
+        <a
+          class="btn green"
+          target="_blank"
+          rel="noopener"
+          href="https://wa.me/93772264019?text=Hello%20Asmat%2C%20I%20want%20to%20discuss%20a%20website."
+        >
+          WhatsApp Me
+        </a>
+
+      </div>
+    </div>
+
+    <div class="hero-img">
+
+      <img
+        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+        alt="Modern web development workspace"
+      >
+
+      <div class="badge">
+        💻 Modern • Responsive • Professional
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="container">
+
+    <div class="head">
+      <h2>About Me</h2>
+      <p>Learn more about Asmat Web Studio</p>
+    </div>
+
+    <div class="about">
+
+      <img
+        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+        alt="Team working on a website"
+        loading="lazy"
+      >
+
+      <div>
+
+        <h3>Building Websites With Passion</h3>
+
+        <p>
+          Welcome to Asmat Web Studio.
+          I focus on creating clean, modern and responsive websites.
+        </p>
+
+        <p>
+          I work with HTML, CSS and JavaScript to build websites
+          for computers, tablets and mobile phones.
+        </p>
+
+        <p>
+          My goal is to help individuals and small businesses
+          build their online presence.
+        </p>
+
+        <a class="btn" href="#contact">
+          Work With Me
+        </a>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Responsive</span>
+          </div>
+
+          <div class="stat">
+            <strong>24/7</strong>
+            <span>Online</span>
+          </div>
+
+          <div class="stat">
+            <strong>3+</strong>
+            <span>Website Types</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+
+  <div class="container">
+
+    <div class="head">
+      <h2>My Skills</h2>
+      <p>Technologies and tools I use</p>
+    </div>
+
+    <div class="grid4">
+
+      <div class="skill">
+        <div class="icon">🌐</div>
+        <h3>HTML5</h3>
+        <p>Website Structure</p>
+      </div>
+
+      <div class="skill">
+        <div class="icon">🎨</div>
+        <h3>CSS3</h3>
+        <p>Website Design</p>
+      </div>
+
+      <div class="skill">
+        <div class="icon">⚡</div>
+        <h3>JavaScript</h3>
+        <p>Website Interaction</p>
+      </div>
+
+      <div class="skill">
+        <div class="icon">🐙</div>
+        <h3>GitHub</h3>
+        <p>Project Hosting</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="head">
+      <h2>My Services</h2>
+      <p>Choose a service for your website</p>
+    </div>
+
+    <div class="grid4">
+
+      <div class="service">
+
+        <img
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=85"
+          alt="Basic website"
+          loading="lazy"
+        >
+
+        <div class="service-body">
+
+          <h3>Basic Website</h3>
+
+          <p>
+            Simple and clean website for personal use.
+          </p>
+
+          <div class="price">$20</div>
+
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            href="https://wa.me/93772264019?text=Hello%20Asmat%2C%20I%20want%20to%20order%20a%20Basic%20Website."
+          >
+            Order Now
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="service">
+
+        <img
+          src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=85"
+          alt="Business website"
+          loading="lazy"
+        >
+
+        <div class="service-body">
+
+          <h3>Business Website</h3>
+
+          <p>
+            Professional website for a business or company.
+          </p>
+
+          <div class="price">$50</div>
+
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            href="https://wa.me/93772264019?text=Hello%20Asmat%2C%20I%20want%20to%20order%20a%20Business%20Website."
+          >
+            Order Now
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="service">
+
+        <img
+          src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=85"
+          alt="Landing page"
+          loading="lazy"
+        >
+
+        <div class="service-body">
+
+          <h3>Landing Page</h3>
+
+          <p>
+            Modern landing page for products and services.
+          </p>
+
+          <div class="price">$30</div>
+
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            href="https://wa.me/93772264019?text=Hello%20Asmat%2C%20I%20want%20to%20order%20a%20Landing%20Page."
+          >
+            Order Now
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="service">
+
+        <img
+          src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=800&q=85"
+          alt="Website editing"
+          loading="lazy"
+        >
+
+        <div class="service-body">
+
+          <h3>Website Editing</h3>
+
+          <p>
+            Fix, update or improve an existing website.
+          </p>
+
+          <div class="price">$15</div>
+
+          <a
+            class="btn"
+            target="_blank"
+            rel="noopener"
+            href="https://wa.me/93772264019?text=Hello%20Asmat%2C%20I%20need%20help%20editing%20my%20website."
+          >
+            Order Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+
+  <div class="container">
+
+    <div class="head">
+      <h2>My Projects</h2>
+      <p>Examples of websites I can create</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=85"
+          alt="Business website project"
+          loading="lazy"
+        >
+
+        <div class="project-body">
+
+          <h3>Business Website</h3>
+
+          <p>
+            Modern website design for a small business.
+          </p>
+
+          <a class="project-btn" href="#contact">
+            Ask About Project
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=85"
+          alt="Personal website project"
+          loading="lazy"
+        >
+
+        <div class="project-body">
+
+          <h3>Personal Website</h3>
+
+          <p>
+            Clean portfolio website for a professional.
+          </p>
+
+          <a class="project-btn" href="#contact">
+            Ask About Project
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1000&q=85"
+          alt="Landing page project"
+          loading="lazy"
+        >
+
+        <div class="project-body">
+
+          <h3>Landing Page</h3>
+
+          <p>
+            Modern landing page for products and services.
+          </p>
+
+          <a class="project-btn" href="#contact">
+            Ask About Project
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="head">
+      <h2>Contact Me</h2>
+      <p>Let's build your website together</p>
+    </div>
+
+    <div class="box">
+
+      <div class="item">
+
+        <strong>📱 WhatsApp</strong>
+
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://wa.me/93772264019"
+        >
+          +93 772 264 019
+        </a>
+
+      </div>
+
+      <div class="item">
+
+        <strong>📧 Email</strong>
+
+        <a href="mailto:asmatullahrohani2@gmail.com">
+          asmatullahrohani2@gmail.com
+        </a>
+
+      </div>
+
+      <br>
+
+      <a
+        class="btn green"
+        target="_blank"
+        rel="noopener"
+        href="https://wa.me/93772264019?text=Hello%20Asmat%2C%20I%20want%20to%20discuss%20a%20website%20project."
+      >
+        💬 Message Me on WhatsApp
+      </a>
+
+      <a
+        class="btn outline"
+        href="mailto:asmatullahrohani2@gmail.com?subject=Website%20Project"
+      >
+        📧 Send Email
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    © 2026 <span>Asmat Web Studio</span>.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Web Design & Development
+  </p>
+
+</footer>
+
+<a class="top" href="#home">↑</a>
+
+<!-- JAVASCRIPT -->
+<script>
+
+const menu = document.getElementById("menu");
+const links = document.getElementById("links");
+
+menu.onclick = () => {
+  links.classList.toggle("open");
+};
+
+document.querySelectorAll(".links a").forEach(link => {
+  link.onclick = () => {
+    links.classList.remove("open");
+  };
+});
+
+</script>
+
+</body>
+</html> 4
