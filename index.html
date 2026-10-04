@@ -1,10 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Asmat Web Studio - modern websites, landing pages and website editing.">
-<title>Asmat Web Studio | Web Developer</title>
+
+<meta name="description" content="Asmat Web Studio — modern, responsive and professional websites, landing pages and website editing by Asmat.">
+<meta name="keywords" content="Asmat Web Studio, Asmat, web developer, web designer, website design, website development, Afghanistan, responsive websites, landing pages">
+<meta name="author" content="Asmat Web Studio">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://asmatullahrohani2-byte.github.io/asmat-web/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Asmat Web Studio | Web Developer">
+<meta property="og:description" content="Modern, responsive and professional websites by Asmat Web Studio.">
+<meta property="og:url" content="https://asmatullahrohani2-byte.github.io/asmat-web/">
+<meta property="og:site_name" content="Asmat Web Studio">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Asmat Web Studio | Web Developer">
+<meta name="twitter:description" content="Modern, responsive and professional websites by Asmat Web Studio.">
+
+<title>Asmat Web Studio | Web Developer & Website Design</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Asmat Web Studio",
+  "url": "https://asmatullahrohani2-byte.github.io/asmat-web/",
+  "description": "Modern, responsive and professional websites, landing pages and website editing.",
+  "email": "asmatullahrohani2@gmail.com",
+  "telephone": "+93772264019",
+  "areaServed": "Afghanistan",
+  "sameAs": []
+}
+</script>
 
 <style>
 *{
@@ -24,14 +55,7 @@
   --light:#f5f8fc
 }
 
-html,body{
-  width:100%;
-  min-height:100%;
-  overflow-x:hidden
-}
-
 body{
-  margin:0;
   font-family:Arial,Helvetica,sans-serif;
   background:var(--light);
   color:var(--text);
@@ -52,12 +76,10 @@ img{
   margin:auto
 }
 
-/* NAVBAR */
 nav{
   position:sticky;
   top:0;
   z-index:999;
-  width:100%;
   background:rgba(7,17,31,.97);
   box-shadow:0 4px 20px #0003
 }
@@ -99,20 +121,13 @@ nav{
   background:none;
   border:0;
   color:white;
-  font-size:28px;
-  cursor:pointer
+  font-size:28px
 }
 
-/* HERO */
 .hero{
   min-height:calc(100vh - 70px);
   padding:70px 0;
-  background:linear-gradient(
-    135deg,
-    var(--dark),
-    var(--dark2) 65%,
-    #075985
-  );
+  background:linear-gradient(135deg,var(--dark),var(--dark2) 65%,#075985);
   color:white
 }
 
@@ -188,9 +203,7 @@ nav{
   width:100%;
   object-fit:cover;
   border-radius:24px;
-  box-shadow:0 25px 60px #0006;
-  background:#dbeafe;
-  min-height:120px
+  box-shadow:0 25px 60px #0006
 }
 
 .badge{
@@ -203,10 +216,8 @@ nav{
   border-radius:12px
 }
 
-/* SECTIONS */
 section{
-  padding:85px 0;
-  width:100%
+  padding:85px 0
 }
 
 .head{
@@ -224,7 +235,6 @@ section{
   color:var(--muted)
 }
 
-/* ABOUT */
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -236,9 +246,7 @@ section{
   height:380px;
   width:100%;
   object-fit:cover;
-  border-radius:20px;
-  background:#dbeafe;
-  min-height:120px
+  border-radius:20px
 }
 
 .about h3{
@@ -278,7 +286,6 @@ section{
   font-size:13px
 }
 
-/* SKILLS */
 .skills{
   background:#eef6ff
 }
@@ -321,7 +328,6 @@ section{
   color:var(--muted)
 }
 
-/* SERVICES */
 .services{
   background:#f1f5ff
 }
@@ -334,9 +340,7 @@ section{
 .service img{
   width:100%;
   height:155px;
-  object-fit:cover;
-  background:#dbeafe;
-  min-height:120px
+  object-fit:cover
 }
 
 .service-body{
@@ -355,7 +359,6 @@ section{
   margin:12px 0
 }
 
-/* PROJECTS */
 .projects{
   background:white
 }
@@ -369,9 +372,7 @@ section{
 .project img{
   width:100%;
   height:220px;
-  object-fit:cover;
-  background:#dbeafe;
-  min-height:120px
+  object-fit:cover
 }
 
 .project-body{
@@ -396,7 +397,6 @@ section{
   color:#06243a
 }
 
-/* CONTACT */
 .contact{
   background:var(--dark);
   color:white
@@ -434,7 +434,6 @@ section{
   font-size:18px
 }
 
-/* FOOTER */
 footer{
   background:#020812;
   color:#94a3b8;
@@ -446,7 +445,6 @@ footer span{
   color:var(--blue)
 }
 
-/* TOP BUTTON */
 .top{
   position:fixed;
   right:18px;
@@ -461,7 +459,6 @@ footer span{
   font-weight:900
 }
 
-/* TABLET */
 @media(max-width:900px){
 
   .hero-grid,
@@ -496,12 +493,7 @@ footer span{
   }
 }
 
-/* MOBILE */
 @media(max-width:650px){
-
-  .container{
-    width:94%
-  }
 
   .menu{
     display:block
@@ -527,36 +519,7 @@ footer span{
     padding:60px 0
   }
 
-  .hero-grid,
-  .about,
-  .projects-grid,
-  .grid4,
-  .stats{
-    width:100%
-  }
-
-  .hero h1{
-    font-size:42px
-  }
-
-  .hero h2{
-    font-size:23px
-  }
-
-  .hero p{
-    font-size:16px
-  }
-
-  .buttons .btn{
-    width:100%;
-    text-align:center
-  }
-
   .hero-img img{
-    height:280px
-  }
-
-  .about img{
     height:300px
   }
 
@@ -574,21 +537,8 @@ footer span{
     grid-template-columns:1fr
   }
 
-  .service img{
-    height:170px
-  }
-
-  .project img{
-    height:200px
-  }
-
   .box{
     padding:25px 15px
-  }
-
-  .box .btn{
-    margin:5px 0;
-    width:100%;
   }
 }
 </style>
@@ -596,7 +546,6 @@ footer span{
 
 <body id="home">
 
-<!-- NAVBAR -->
 <nav>
   <div class="container nav">
 
@@ -618,18 +567,22 @@ footer span{
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
+
   <div class="container hero-grid">
 
     <div>
-      <h1>Hi, I'm <span>Asmat</span></h1>
 
-      <h2>Web Developer & Designer</h2>
+      <h1>
+        Hi, I'm <span>Asmat</span>
+      </h1>
+
+      <h2>
+        Web Developer & Designer
+      </h2>
 
       <p>
-        I create modern, responsive and professional websites
-        for businesses, personal brands and online projects.
+        I create modern, responsive and professional websites for businesses, personal brands and online projects.
       </p>
 
       <div class="buttons">
@@ -648,6 +601,7 @@ footer span{
         </a>
 
       </div>
+
     </div>
 
     <div class="hero-img">
@@ -664,9 +618,9 @@ footer span{
     </div>
 
   </div>
+
 </header>
 
-<!-- ABOUT -->
 <section id="about">
 
   <div class="container">
@@ -686,21 +640,20 @@ footer span{
 
       <div>
 
-        <h3>Building Websites With Passion</h3>
+        <h3>
+          Building Websites With Passion
+        </h3>
 
         <p>
-          Welcome to Asmat Web Studio.
-          I focus on creating clean, modern and responsive websites.
+          Welcome to Asmat Web Studio. I focus on creating clean, modern and responsive websites.
         </p>
 
         <p>
-          I work with HTML, CSS and JavaScript to build websites
-          for computers, tablets and mobile phones.
+          I work with HTML, CSS and JavaScript to build websites for computers, tablets and mobile phones.
         </p>
 
         <p>
-          My goal is to help individuals and small businesses
-          build their online presence.
+          My goal is to help individuals and small businesses build their online presence.
         </p>
 
         <a class="btn" href="#contact">
@@ -734,7 +687,6 @@ footer span{
 
 </section>
 
-<!-- SKILLS -->
 <section class="skills" id="skills">
 
   <div class="container">
@@ -776,7 +728,6 @@ footer span{
 
 </section>
 
-<!-- SERVICES -->
 <section class="services" id="services">
 
   <div class="container">
@@ -918,7 +869,6 @@ footer span{
 
 </section>
 
-<!-- PROJECTS -->
 <section class="projects" id="projects">
 
   <div class="container">
@@ -1008,14 +958,18 @@ footer span{
 
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
 
   <div class="container">
 
     <div class="head">
+
       <h2>Contact Me</h2>
-      <p>Let's build your website together</p>
+
+      <p>
+        Let's build your website together
+      </p>
+
     </div>
 
     <div class="box">
@@ -1068,12 +1022,10 @@ footer span{
 
 </section>
 
-<!-- FOOTER -->
 <footer>
 
   <p>
-    © 2026 <span>Asmat Web Studio</span>.
-    All Rights Reserved.
+    © 2026 <span>Asmat Web Studio</span>. All Rights Reserved.
   </p>
 
   <p>
@@ -1084,23 +1036,22 @@ footer span{
 
 <a class="top" href="#home">↑</a>
 
-<!-- JAVASCRIPT -->
 <script>
 
-const menu = document.getElementById("menu");
-const links = document.getElementById("links");
+const m = document.getElementById('menu');
+const l = document.getElementById('links');
 
-menu.onclick = () => {
-  links.classList.toggle("open");
+m.onclick = () => {
+  l.classList.toggle('open');
 };
 
-document.querySelectorAll(".links a").forEach(link => {
-  link.onclick = () => {
-    links.classList.remove("open");
+document.querySelectorAll('.links a').forEach(a => {
+  a.onclick = () => {
+    l.classList.remove('open');
   };
 });
 
 </script>
 
 </body>
-</html> 4
+</html> 
